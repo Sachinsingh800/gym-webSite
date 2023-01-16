@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Style from './Registration.module.css'
 import { useState } from 'react';
 import { validEmail, validPassword , validusername} from './regex1';
+import Home from '../home/Home'
 
 function Registration() {
   const [email, setEmail] = useState('');
@@ -15,6 +16,7 @@ function Registration() {
 
   const validate = () => {
      if (!validEmail.test(email)) {
+        
         setEmailErr(true);
      }
      if (!validusername.test(name)) {
@@ -23,9 +25,16 @@ function Registration() {
      if (!validPassword.test(password)) {
         setPwdError(true);
      }
+     if(email === "" || name === "" || password=== ""){
+      alert("please enter something")
+     }else{
+      alert("registration successful")
+     }
      localStorage.setItem("NameRegister",name)
      localStorage.setItem("EmailRegister",email)
      localStorage.setItem("PasswordRegister",password)
+
+   
   };
   
   
@@ -33,6 +42,7 @@ function Registration() {
   
   return (
     <>
+    <Home/>
     <div className={Style.Body}>
     <Form className={Style.Form}>
       <h1 className={Style.Header}>Registration</h1>

@@ -7,22 +7,31 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 
 
+
 function Home() {
   
 
     const Navoption=[
-       {Option: 'Home', path : ''},
-      {Option: 'log' ,path:'./Login' },
-      {Option: 'About' ,path:'./About' },
-      {Option: 'Registration' ,path:'./Registration' }
+       {Option: 'Home', path : '/'},
+      {Option: 'log' ,path:'/Login' },
+      {Option: 'About' ,path:'/About' },
+      {Option: 'Registration' ,path:'/Registration' }
     ]
-    
+
   return (
     <>
+    
     <div className={style.Wrapper}>
-      
-      <img className={style.ProfileImg} src={Image} alt='ProfileImg'/>
+      <span className={style.ImgLogo} >
+    <a href="/">
+          <img
+            src={Image}
+            alt="ProfileImg"
+          />
+        </a>
+        </span>
 
+        <div className={style.navopt}>
       <div className={style.Dropdown}>
       <Dropdown >
       <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -39,11 +48,11 @@ function Home() {
     </div>
     {Navoption.map(({Option ,path})=>
     <Link to={path}>
-        <p className={style.option}>{Option}</p>
+        <p className={style.List}>{Option}</p>
         </Link>
    ) }
    </div>
-   <br/>
+   </div>
     </>
   )
    

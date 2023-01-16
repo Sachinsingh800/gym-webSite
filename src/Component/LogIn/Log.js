@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Style from './Log.module.css'
 import { useState } from 'react';
 import { validEmail, validPassword } from './regex.js';
+import Home from '../home/Home'
 
 function Log() {
   const [email, setEmail] = useState('');
@@ -30,6 +31,7 @@ function Log() {
 
   return (
     <>
+    <Home/>
     <div className={Style.Body}>
     <Form className={Style.Form}>
       <h1 className={Style.Header}>Login</h1>

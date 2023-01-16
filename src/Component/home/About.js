@@ -1,10 +1,12 @@
 import React from 'react'
 import style from './About.module.css'
 import Image from './Profile.png'
+import Home from './Home'
 
 function About() {
   return (
     <>
+    <Home/>
     <div className={style.main} >
         <div style={{display:'flex'}}>
         <div  className={style.Column}>
@@ -30,10 +32,10 @@ My father is a contractor, my mother is a housewife. And I belong to the nuclear
 
 </h6>
           </div>
-          <div  className={style.All}>
-          <div  className={style.Column2}>About your self ?</div>
-          <div  className={style.Column2}> What is your hobbies? </div>
-          <div  className={style.Column2}>what you likes ?</div>
+          <div  className={style.AllBlock}>
+          <div  className={style.block}>About your self ?</div>
+          <div  className={style.block}> What is your hobbies? </div>
+          <div  className={style.block}>what you likes ?</div>
           </div>
           
          </div>

@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Log from './LogIn/Log';
-import About from './home/About';
-import Registration from './Registration';
+import Log from './Component/LogIn/Log';
+import About from './Component/home/About';
+import Registration from './Component/Registration/Registration';
+import reggestraion from './Component/Registration/reggestraion'
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -32,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/Registration",
     element: <Registration/>,
+  },
+  {
+    path: "/reggestraion",
+    element: <reggestraion/>,
   }
 ]);
 
